@@ -40,7 +40,7 @@ fetchISSFlyOverTimes = function(coords, callback) {
       callback(Error(`Status Code ${response.statusCode} when fetching ISS pass times: ${body}`), null);
       return;
     }
-    const passed = JSON.parse(body).response;
+    const passes = JSON.parse(body).response;
     callback(null, passes);
   });
 };
